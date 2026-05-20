@@ -1,0 +1,11 @@
+CREATE TABLE users (
+				id INTEGER PRIMARY KEY AUTOINCREMENT,
+				full_name TEXT NOT NULL,
+				email TEXT NOT NULL UNIQUE,
+				password TEXT NOT NULL,
+				created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+			)
+
+insert into users(id , 	full_name, 	email, 	password, 	created_at)
+select id,full_name, 	email, 	password, 	created_at from users1
+

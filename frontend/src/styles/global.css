@@ -1,0 +1,31 @@
+.navbar {
+  height: 60px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+.nav-links a {
+  margin-left: 18px;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}

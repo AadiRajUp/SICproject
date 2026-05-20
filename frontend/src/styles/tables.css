@@ -1,0 +1,30 @@
+.table-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th {
+  text-align: left;
+  padding: 12px;
+  font-size: 13px;
+  color: var(--muted);
+  border-bottom: 1px solid #eee;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+tr:hover {
+  background: #f9fafb;
+}

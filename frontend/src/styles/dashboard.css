@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #fafafa;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+/* Header Focus */
+.dashboard-header {
+  margin-bottom: 32px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 24px;
+}
+
+.dashboard-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #000;
+  letter-spacing: -0.02em;
+}
+
+.dashboard-header p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Top Metrics Bar */
+.dashboard-top-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.metric-card {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.15s ease;
+}
+
+.metric-card:hover {
+  border-color: #ccc;
+}
+
+.metric-card.highlight {
+  background: #000;
+  border-color: #000;
+}
+
+.metric-card.highlight .metric-title {
+  color: #888;
+}
+
+.metric-card.highlight .metric-value {
+  color: #fff;
+}
+
+.metric-card.highlight .metric-sub {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.metric-title {
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.metric-value {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+
+.metric-sub {
+  font-size: 12px;
+  color: #0070f3; /* Professional blue subtle accent */
+  font-weight: 500;
+}
+
+/* Charts Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.chart-card-full, .chart-card {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 2px rgba(176, 43, 43, 0.02);
+}
+
+.feature-chart {
+  grid-column: span 12;
+}
+
+.half-chart {
+  grid-column: span 6;
+}
+
+.chart-card h3, .chart-card-full h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.01em;
+}
+
+.chart-wrapper {
+  flex: 1;
+  min-height: 280px;
+  position: relative;
+}
+
+/* Loading State */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #666;
+  background: #fafafa;
+}
+
+.loader {
+  border: 2px solid #eaeaea;
+  border-left-color: #000;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.recommendations-section {
+  margin-bottom: 32px;
+}
+
+.recommendations-heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #000;
+  letter-spacing: -0.02em;
+}
+
+.recommendations-lede {
+  margin: 0 0 16px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.recommendations-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.recommendation-card {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.recommendation-card--high {
+  border-left: 4px solid #ef4444;
+}
+
+.recommendation-card--medium {
+  border-left: 4px solid #0070f3;
+}
+
+.recommendation-card--low {
+  border-left: 4px solid #94a3b8;
+}
+
+.recommendation-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.rec-priority {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.rec-priority--high {
+  color: #b91c1c;
+}
+
+.rec-priority--medium {
+  color: #0070f3;
+}
+
+.rec-priority--low {
+  color: #64748b;
+}
+
+.rec-category {
+  font-size: 11px;
+  color: #666;
+  text-transform: capitalize;
+}
+
+.recommendation-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #111;
+}
+
+.recommendation-detail {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+
+@media (max-width: 1024px) {
+  .half-chart { grid-column: span 12; }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container { padding: 24px 16px; }
+  .metric-value { font-size: 28px; }
+}

@@ -1,0 +1,17 @@
+.form-card {
+  max-width: 520px;
+  margin: auto;
+  background: white;
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  border: 1px solid #eee;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-top: 10px;
+  display: block;
+}
