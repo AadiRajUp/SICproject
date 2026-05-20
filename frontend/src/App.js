@@ -38,7 +38,7 @@ function App() {
   return (
     <Router>
       <nav className="navbar">
-        <div className="brand">FDS Dashboard</div>
+        <div className="brand">Productivity Challenge</div>
         <div className="nav-center">
           <div className="nav-links">
             <Link to="/">Dashboard</Link>
