@@ -62,3 +62,15 @@ button:hover {
   font-size: 13px;
   margin-top: 10px;
 }
+.auth-card a {
+  display: block;
+  text-align: center;
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.auth-card a:hover {
+  color: var(--primary);
+}

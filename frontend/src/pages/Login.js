@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/auth.css";
 import { apiFetch } from "../api/client";
-
-function Login() {
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+function Login({ onLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -14,6 +14,7 @@ function Login() {
         method: "POST",
         body: JSON.stringify({ email, password }),
       });
+      onLogin({ authenticated: true});
       navigate("/");
     } catch (e) {
       alert(e?.message || "Login failed");
@@ -28,6 +29,7 @@ function Login() {
         <input placeholder="Email" onChange={e => setEmail(e.target.value)} />
         <input placeholder="Password" type="password" onChange={e => setPassword(e.target.value)} />
         <button onClick={handleSubmit}>Login</button>
+        <Link to="/signup">signup?</Link>
       </div>
     </div>
   );

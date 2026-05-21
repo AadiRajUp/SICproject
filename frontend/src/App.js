@@ -42,24 +42,28 @@ function App() {
         <div className="nav-center">
           <div className="nav-links">
             <Link to="/">Dashboard</Link>
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Signup</Link>
+            
+            {me.authenticated ? (
+              <>
             <Link to="/today">Today Data</Link>
+            <a onClick={handleLogout} style={{cursor: "pointer"}}>Logout</a>
+            </>
+          ):
+          (
+            <Link to="/login">Login</Link>
+          )
+          }
           </div>
         </div>
         <div className="nav-right">
-          {me.authenticated && (
-            <button className="nav-button" onClick={handleLogout}>
-              Logout
-            </button>
-          )}
+          
         </div>
       </nav>
 
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login onLogin={setMe} />} />
+        <Route path="/signup" element={<Signup onLogin={setMe} />} />
         <Route path="/today" element={<TodayData />} />
       </Routes>
     </Router>

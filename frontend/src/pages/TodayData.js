@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import "../styles/form.css";
 import { apiFetch } from "../api/client";
+import { useNavigate } from "react-router-dom";
 
 function TodayData() {
   const [studyHours, setStudyHours] = useState("");
   const [focusScore, setFocusScore] = useState("");
   const [sleepHours, setSleepHours] = useState("");
   const [phoneUsage, setPhoneUsage] = useState("");
-
+  const navigate = useNavigate()
   const handleSubmit = async () => {
     // Basic validation
     if (!studyHours || !focusScore || !sleepHours || !phoneUsage) {
@@ -24,8 +25,8 @@ function TodayData() {
             phone_usage_hours: parseFloat(phoneUsage),
           }),
         });
-
-        alert("Data saved successfully!");
+        navigate("/");
+        //alert("Data saved successfully!");
         setStudyHours("");
         setFocusScore("");
         setSleepHours("");

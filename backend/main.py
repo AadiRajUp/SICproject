@@ -163,7 +163,7 @@ def today_data():
                 score,
             ),
         )
-
+    db.commit()
     return jsonify({"message": "Data saved successfully", "score": round(score, 2)})
 
 def _fetch_series(user_id, days=None):

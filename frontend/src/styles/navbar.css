@@ -44,10 +44,22 @@
   transition: 0.2s;
 }
 
-.nav-links a:hover {
+
+
+.nav-button {
+  all:unset;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+  transition: 0.2s;
+  background: transparent;
+}
+.nav-button:hover {
   color: var(--primary);
+  cursor: pointer;
 }
 
+/*
 .nav-button {
   padding: 8px 10px;
   border-radius: 8px;
@@ -61,3 +73,4 @@
 .nav-button:hover {
   background: #f7f7f7;
 }
+  */

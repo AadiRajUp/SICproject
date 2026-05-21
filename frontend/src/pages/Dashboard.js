@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 function Dashboard() {
   const [data, setData] = useState(null);
   const [insights, setInsights] = useState(null);
-  const [days, setDays] = useState(30);
+  const [days, setDays] = useState(7);
   const [sortKey, setSortKey] = useState("activity_date");
   const [sortDir, setSortDir] = useState("desc");
 
